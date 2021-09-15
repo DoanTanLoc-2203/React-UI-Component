@@ -15,7 +15,7 @@ import { BackgroundColor, Size, Variant } from "./type";
 
 export interface ButtonProps {
   children?: React.ReactNode;
-  size?: Size;
+  size?: Size | string;
   bgColor?: BackgroundColor;
   variant?: Variant;
   onClick?: () => void;
