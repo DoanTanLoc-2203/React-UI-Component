@@ -88,7 +88,7 @@ var reactIs$2 = {exports: {}};
 
 var reactIs_production_min$1 = {};
 
-/** @license React v17.0.1
+/** @license React v17.0.2
  * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -105,7 +105,7 @@ reactIs_production_min$1.typeOf=y$2;
 
 var reactIs_development$1 = {};
 
-/** @license React v17.0.1
+/** @license React v17.0.2
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.

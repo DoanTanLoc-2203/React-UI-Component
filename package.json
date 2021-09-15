@@ -4,10 +4,18 @@
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c",
     "test": "react-scripts test",
+    "jest": "jest",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -40,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-image": "^2.1.1",
@@ -55,17 +65,21 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/enzyme": "^3.10.9",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.0.1",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.14",
+    "babel-jest": "^27.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.0",
     "postcss": "^8.3.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

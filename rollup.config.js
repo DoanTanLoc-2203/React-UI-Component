@@ -1,5 +1,4 @@
 /** @format */
-
 import typescript from "rollup-plugin-typescript2";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import cleaner from "rollup-plugin-cleaner";
