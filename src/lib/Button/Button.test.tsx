@@ -19,12 +19,13 @@ describe("Default button", () => {
 });
 describe("Button size", () => {
   const size = ["xs", "sm", "md", "lg", "xl"];
+  const sizepx = ["10px", "15px", "20px", "25px", "30px", "35px"];
   for (let i = 0; i < size.length; i++) {
-    it("size = " + size[i] + " => fontsize = " + (10 + 5 * i) + "px", () => {
+    it("size = " + size[i] + " => fontsize = " + sizepx[i] + "px", () => {
       const wrapper = mount(<Button size={size[i]}>Click me</Button>);
       expect(
         getComputedStyle(wrapper.getDOMNode()).getPropertyValue("font-size"),
-      ).toBe(10 + 5 * i + "px");
+      ).toBe(sizepx[i]);
     });
   }
 });

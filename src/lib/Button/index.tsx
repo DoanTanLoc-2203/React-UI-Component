@@ -9,14 +9,21 @@ import {
   warningColor,
 } from "./color";
 import styled from "styled-components";
-import { BackgroundColor, Size, Variant } from "./type";
+import {
+  BackgroundColor,
+  BackgroundColorType,
+  Size,
+  SizeType,
+  Variant,
+  VariantType,
+} from "./constants";
 
 export interface ButtonProps {
   children?: React.ReactNode;
   size?: Size | string;
   bgColor?: BackgroundColor;
   variant?: Variant;
-  onClick?: () => void;
+  onClick?: (value?: any) => void;
 }
 
 export interface StyledProps {
@@ -26,22 +33,22 @@ export interface StyledProps {
 
 const caculateSize = (size: string | undefined) => {
   /* xs, sm, md, lg, or xl */
-  if (size === "xs") return "10px";
-  else if (size === "sm") return "15px";
-  else if (size === "md") return "20px";
-  else if (size === "lg") return "25px";
-  else if (size === "xl") return "30px";
+  if (size === SizeType.XS) return "10px";
+  else if (size === SizeType.SM) return "15px";
+  else if (size === SizeType.MD) return "20px";
+  else if (size === SizeType.LG) return "25px";
+  else if (size === SizeType.XL) return "30px";
   else return "10px";
 };
 
 const caculateColorScheme = (bgColor: string) => {
   /* default, danger, primary, success , warning, info*/
-  if (bgColor === "default") return defaultColor;
-  else if (bgColor === "danger") return dangerColor;
-  else if (bgColor === "primary") return primaryColor;
-  else if (bgColor === "success") return successColor;
-  else if (bgColor === "info") return infoColor;
-  else if (bgColor === "warning") return warningColor;
+  if (bgColor === BackgroundColorType.DEFAULT) return defaultColor;
+  else if (bgColor === BackgroundColorType.DANGER) return dangerColor;
+  else if (bgColor === BackgroundColorType.PRIMARY) return primaryColor;
+  else if (bgColor === BackgroundColorType.SUCCESS) return successColor;
+  else if (bgColor === BackgroundColorType.INFO) return infoColor;
+  else if (bgColor === BackgroundColorType.WARNING) return warningColor;
   else return defaultColor;
 };
 
@@ -104,7 +111,7 @@ export function Button(props: ButtonProps) {
   const size = caculateSize(props.size);
 
   const RenderButtonType = () => {
-    if (props.variant === "solid")
+    if (props.variant === VariantType.SOLID)
       return (
         <MyButtonSolid
           onClick={props.onClick}
@@ -113,7 +120,7 @@ export function Button(props: ButtonProps) {
           {props.children}
         </MyButtonSolid>
       );
-    else if (props.variant === "outline")
+    else if (props.variant === VariantType.OUTLINE)
       return (
         <MyButtonOutline
           onClick={props.onClick}
@@ -122,7 +129,7 @@ export function Button(props: ButtonProps) {
           {props.children}
         </MyButtonOutline>
       );
-    else if (props.variant === "ghost")
+    else if (props.variant === VariantType.GHOST)
       return (
         <MyButtonGhost
           onClick={props.onClick}
@@ -131,7 +138,7 @@ export function Button(props: ButtonProps) {
           {props.children}
         </MyButtonGhost>
       );
-    else if (props.variant === "link")
+    else if (props.variant === VariantType.LINK)
       return (
         <MyButtonLink
           onClick={props.onClick}
