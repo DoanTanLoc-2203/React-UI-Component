@@ -1,5 +1,3 @@
-/** @format */
-
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import Enzyme, { mount, shallow } from "enzyme";
 import React from "react";

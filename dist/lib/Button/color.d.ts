@@ -1,4 +1,3 @@
-/** @format */
 export interface TableColor {
     bg: string;
     border: string;

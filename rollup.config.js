@@ -11,15 +11,20 @@ export default {
   input: "src/index.ts",
   output: [
     {
-      file: packageJson.main,
-      format: "cjs",
-      sourcemap: true,
-    },
-    {
-      file: packageJson.module,
+      dir: "dist",
       format: "esm",
-      sourcemap: true,
+      exports: "auto",
     },
+    // {
+    //   file: packageJson.main,
+    //   format: "cjs",
+    //   sourcemap: true,
+    // },
+    // {
+    //   file: packageJson.module,
+    //   format: "esm",
+    //   sourcemap: true,
+    // },
   ],
   plugins: [
     cleaner({
