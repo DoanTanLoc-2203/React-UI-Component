@@ -1,13 +1,12 @@
-/** @format */
 import React from "react";
 import { TableColor } from "./color";
-import { BackgroundColor, Size, Variant } from "./type";
+import { BackgroundColor, Size, Variant } from "./constants";
 export interface ButtonProps {
     children?: React.ReactNode;
-    size?: Size;
+    size?: Size | string;
     bgColor?: BackgroundColor;
     variant?: Variant;
-    onClick?: () => void;
+    onClick?: (value?: any) => void;
 }
 export interface StyledProps {
     sizeStyled: string;

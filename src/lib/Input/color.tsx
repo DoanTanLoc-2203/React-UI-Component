@@ -7,44 +7,44 @@ export interface TableColor {
 }
 
 export const defaultColor = {
-  bg: "white",
+  bg: "#E6E6E6",
   border: "#CCCCCC",
-  bgHover: "#E6E6E6",
+  bgHover: "#CCCCCC",
   borderHover: "#ADADAD",
   color: "black",
 };
 export const dangerColor = {
-  bg: "#D9534F",
+  bg: "#C9302C",
   border: "#D43F3A",
-  bgHover: "#C9302C",
+  bgHover: "#D9534F",
   borderHover: "#AC2925",
-  color: "white",
+  color: "black",
 };
 export const primaryColor = {
-  bg: "#337AB7",
+  bg: "#286090",
   border: "#2E6DA4",
-  bgHover: "#286090",
+  bgHover: "#337AB7",
   borderHover: "#204D74",
-  color: "white",
+  color: "black",
 };
 export const successColor = {
-  bg: "#5CB85C",
+  bg: "#449D44",
   border: "#4CAE4C",
-  bgHover: "#449D44",
+  bgHover: "#5CB85C",
   borderHover: "#398439",
-  color: "white",
+  color: "black",
 };
 export const infoColor = {
-  bg: "#5BC0DE",
+  bg: "#31B0D5",
   border: "#46B8DA",
-  bgHover: "#31B0D5",
+  bgHover: "#5BC0DE",
   borderHover: "#269ABC",
-  color: "white",
+  color: "black",
 };
 export const warningColor = {
-  bg: "#F0AD4E",
+  bg: "#EC971F",
   border: "#EEA236",
-  bgHover: "#EC971F",
+  bgHover: "#F0AD4E",
   borderHover: "#D58512",
-  color: "white",
+  color: "black",
 };
